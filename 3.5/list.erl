@@ -3,28 +3,28 @@
 
 %% Filter list
 filter(List, Pred) ->
-	[Elem || Elem <- List, Elem =< Pred].
+    [Elem || Elem <- List, Elem =< Pred].
 
 %% Reverse list
 reverse(List) ->
-	reverse(List, []).
+    reverse(List, []).
 
 reverse([], NewList) ->
-	NewList;
+    NewList;
 reverse([Head | Tail], NewList) ->
-	reverse(Tail, [Head | NewList]).	
+    reverse(Tail, [Head | NewList]).	
 
 %% Concatenate all lists from List to one
 concat(List) ->
-	concat(List, []).
+    concat(List, []).
 
 concat([], NewList) ->
-	NewList;
+    NewList;
 concat([Head | Tail], NewList) ->
-	concat(Tail, concat(Head, NewList));
+    concat(Tail, concat(Head, NewList));
 concat(Val, NewList) ->
-	NewList ++ [Val].
+    NewList ++ [Val].
 
 %% Flat all elements in nested lists to one
 flatten(List) ->
-	concat(List).
+    concat(List).

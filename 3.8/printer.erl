@@ -3,4 +3,4 @@
 
 %% Convert instruction-set to string
 print(InstrSet) ->
-	throw(not_implemented_yet).
+    throw(not_implemented_yet).
